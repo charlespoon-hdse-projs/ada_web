@@ -1,0 +1,233 @@
+.item table a:link {
+	color: #666;
+	font-weight: bold;
+	text-decoration:none;
+}
+.item table a:visited {
+	color: #999999;
+	font-weight:bold;
+	text-decoration:none;
+}
+.item table a:active,
+.item table a:hover {
+	color: #bd5a35;
+	text-decoration:underline;
+}
+.item table {
+	color:#666;
+	font-size:12px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	margin:20px;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+.item table th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-bottom:1px solid #e0e0e0;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+.item table th:first-child {
+	text-align: left;
+	padding-left:20px;
+}
+.item table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+.item table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+.item table tr {
+	text-align: center;
+	padding-left:20px;
+}
+.item table td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+.item table td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+.item table tr.even td {
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+.item table tr:last-child td {
+	border-bottom:0;
+}
+.item table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+.item table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+.item table tr:hover td {
+	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+}
+.divider {
+	border: 1px solid black;
+	border-color: #000;
+	border-radius: 3px;
+}
+.roundBorder {
+	border-color: #AAA;
+	border-radius: 3px;
+}
+
+.options {
+    text-align: center;
+    margin-top:20%;
+}
+
+a.button {
+    display: inline-block;
+    margin: 5px;
+    padding: 25px 15px;
+    border: 2px #999 solid;
+    border-radius: 5px;
+    background-color: #222;
+    
+    /*
+    background: linear-gradient(to bottom, #ccc, #aaa);
+    background: -webkit-linear-gradient(to bottom, #ccc, #aaa);
+    background: -moz-linear-gradient(to bottom, #ccc, #aaa);
+    background: -ms-linear-gradient(to bottom, #ccc, #aaa);
+    */
+}
+
+a:active.button {
+    /*
+    background: linear-gradient(to bottom, #aaa, #ccc);
+    background: -webkit-linear-gradient(to bottom, #aaa, #ccc);
+    background: -moz-linear-gradient(to bottom, #aaa, #ccc);
+    background: -ms-linear-gradient(to bottom, #aaa, #ccc);
+    */
+}
+
+a.button, a:visited.button {
+    font-weight: bold;
+    color: #888;
+    text-decoration: none;
+}
+
+a:hover.button {
+    background-color: #888;
+    color: #222;
+    border: 2px #555 solid;
+}
+a:active.button {
+    background-color: #AAA;
+    color: #444;
+}
+
+.payment_logos {
+    margin: 0 3%;
+    margin-top : 20%;
+    text-align: center;
+}
+
+.payment_logos img {
+    margin: auto 1%;
+}
+
+#container {
+	height:700px;
+	background-color:transparent;
+}
+
+.divider  #progressBar {
+	width:98%;
+	height:10%; /*ttl:22*/
+	margin: 1% 1%;
+	vertical-align: center;
+	text-align:center;
+}
+
+.divider #left_navigation {
+	width:75%;
+	height:86%;
+	margin: auto 1%;
+	float:left;
+}
+
+.divider #right_content{
+	width:20%;
+	height:86%; /*ttl:78*/
+	margin: auto 1%;
+	float:left;
+}
+
+.right_content_element {
+	margin: 4%;
+}
+
+
+#price {
+	width:94%;
+	height:40%;
+}
+
+#priceDetails {
+	width:98%;
+	height: 70%;
+	margin: 5% 1% auto 1%;
+	text-align:right;
+}
+
+#promotionalCode {
+	float:right;
+	margin: 5% 1% auto 1%;
+	width: 98%;
+	text-align:center;
+}
+
+#progressBar {
+	display: table;
+	vertical-align:middle;
+	text-align: right;
+}
+
+.progressList {
+	position: relative;
+	top: 12px;
+	left: 28%;
+	width:100%;
+}
+
+.progressList .progressListItem{
+	float:left;
+	list-style: none;
+	margin: auto 1%;
+}
+
+

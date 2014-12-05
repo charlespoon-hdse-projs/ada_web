@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/shoppingcart.js"></script>
+</head>
+<body>
+<header>
+    <div class="headbar">
+        <div class="headbarInner">
+            Welcome, user.
+            <div class="right">Login | Register</div>
+        </div>
+    </div>
+    <div class="logoSearch">
+        <img src="img/logo.png" alt="logo" title="Back to Home page" />
+        <div class="right" id="searchbox">
+            <input type="text" name="criteria" placeholder="Search a product" />
+            <button type="submit">Search</button>
+        </div>
+    </div>
+    <div class="cellWrapper category">
+        <div class="cell categoryItem" id="catMale">Male</div>
+        <div class="cell categoryItem" id="catFemale">Female</div>
+        <div class="cell categoryItem" id="catKids">Kids</div>
+        <div class="cell categoryItem" id="catAccessories">Accessories</div>
+    </div>
+</header>
+<content>
+<div id="container" class="divider">
+	<div id="progressBar" class="divider">
+		<div class="progressList">
+			<ul>
+				<li class="progressListItem">Cart</li>
+				<li class="progressListItem">></li>
+				<li class="progressListItem">Confirmation</li>
+				<li class="progressListItem">></li>
+				<li class="progressListItem">Delivery Measure</li>
+				<li class="progressListItem">></li>
+				<li class="progressListItem">Payment</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="left_navigation" class="divider">
+		<table>
+			<tr><td></td></tr>
+		</table>
+	</div>
+	<div id="right_content" class="divider">
+		<div id="price" class="divider roundBorder right_content_element">
+			<table id="priceDetails" cellspacing="10">
+				<tr>
+					<td style="width:65%; font-size:20px; font-weight:bold;">Item total: </td>
+					<td >HKD</td>
+					<td >0.0</td>
+				</tr>
+				<tr><td>Shipment: </td><td>HKD</td><td>0.0</td></tr>
+				<tr style="height:20px"></tr>
+				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="text-align:right">HKD</td><td>-0.0 (0%)</td></tr>
+			</table>
+			
+			<div id="promotionalCode" >
+				Enter promotional code
+			</div>
+		</div>
+		<div class="roundBorder right_content_element"  id="">
+			<table style="width:98%; margin: 5% 1% auto 1%">
+				<tr>
+					<td style="width:65%; font-size:20px; font-weight:bold; text-align:right">Total price: </td>
+					<td style="text-align:center">HKD</td>
+					<td style="text-align:center;">0.0</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="options">
+			<a class="button" href="">Continue shopping</a>
+			<a class="button" href="">Secure Checkout</a>
+		</div>
+        
+        <div class="payment_logos">
+            <img src="img/MasterCard_Logo.png" width="100px" height="60px"/>
+            <img src="img/visa_Logo.png" width="100px" height="60px"/>
+        </div>
+	</div>
+</div>
+</content>
+<footer>
+	this is footer
+</footer>
+</body>
+</html>
