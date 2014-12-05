@@ -1,0 +1,30 @@
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+html, body { background: none #111; color: #333333; border: 0; margin: 0; padding: 0; font: 14px sans-serif; }
+
+.widest { width: 100%; }
+.cellWrapper { display: table; }
+.cell { display: table-cell; }
+
+header { background: none #ccc; }
+.headbar { background: none #333; width: 100%; color: #ffffff; font-size: 12px; padding: 1em 0; }
+.headbarInner { margin: 0 50px; }
+.logoSearch { margin: 50px; }
+.logoSearch > .right { height: 20px; margin-top: 10px; }
+#searchbox { border: 1px #999 solid; background: #eee; }
+#searchbox > input[type=text] { border: none; background: none transparent; color: #555; }
+#searchbox > button[type=submit] { width: 16px; height: 16px; background: url("search.png") no-repeat no-repeat transparent; border: none; outline:none; color: transparent; }
+.category { width: 100%; }
+.categoryItem { width: 25%; padding: 30px; color: #eee; font-size: 2em; }
+#catMale { background: url("col_blue.png") no-repeat no-repeat; }
+#catFemale { background: url("col_red.png") no-repeat no-repeat; }
+#catKids { background: url("col_green.png") no-repeat no-repeat; }
+#catAccessories { background: url("col_yellow.png") no-repeat no-repeat; }
+
+content { display: block; background: none #cccccc; padding: 50px; }
+
+footer { display: block; border-top: 10px #333 solid; background: none #111; color: #777; padding: 50px; }
+
+/* search pages */
