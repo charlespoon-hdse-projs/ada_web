@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/shoppingcart.js"></script>
+<script src="js/shoppingcart.js"></script>    
 </head>
 <body>
 <header>
@@ -31,46 +31,117 @@
 <content>
 <div id="container" class="divider">
     
-	<div id="progressBar" class="roundBorder">
-        <ul style="display:inline-block; padding:0.5% 0%; width:28%">
-            <li class="progressListItem">Cart</li>
-            <li class="progressListItem">></li>
-            <li class="progressListItem">Confirmation</li>
-            <li class="progressListItem">></li>
-            <li class="progressListItem">Delivery Measure</li>
-            <li class="progressListItem">></li>
-            <li class="progressListItem">Payment</li>
+	<div id="progressBar" class="roundBorder" style="position: relative" >
+        <ul style="width:350px; height:20px; position: absolute; top:50%; left:50%; margin: -10px 0 0 -175px">
+            <li class="progressListItem selectedListItem"><a href="">Cart</a></li>
+            <li class="progressListItem"><img src="img/arrow_right.png" style="width:20px;"/></li>
+            <li class="progressListItem"><a href="">Delivery Measure</a></li>
+            <li class="progressListItem"><img src="img/arrow_right.png" style="width:20px;"/></li>
+            <li class="progressListItem"><a href="">Payment</a></li>
         </ul>
 	</div>
 	
-	<div id="left_navigation" class="divider">
+	<div id="left_navigation" class="divider item" >
+        <div id="relativeItem" >
+            12345
+        </div>
 		<table>
-			<tr><td></td></tr>
+            <thead>
+                <tr>
+                    <th width="30%">
+                        Product
+                    </th>
+                    <th>Product Details</th>
+                    <th>Amount</th>
+                    <th>Unit Price</th>
+                    <th>Sub-Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="image_with_name">
+                            <img src="img/prd_01.jpg" width=150px height=200px/>
+                            <div>Name of Product</div>
+                        </div>
+                    </td>
+                    <td>Details</td>
+                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td>199.9</td>
+                    <td>599.7</td>
+                </tr>
+                
+                <tr class="alter">
+                    <td>
+                        <div class="image_with_name">
+                            <img src="img/prd_02.jpg" width=150px height=200px/>
+                            <div>Name of Product</div>
+                        </div>
+                    </td>
+                    <td>Details</td>
+                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td>199.9</td>
+                    <td>599.7</td>
+                </tr>                
+                
+                <tr>
+                    <td>
+                        <div class="image_with_name">
+                            <img src="img/prd_03.jpg" width=150px height=200px/>
+                            <div>Name of Product</div>
+                        </div>
+                    </td>
+                    <td>Details</td>
+                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td>199.9</td>
+                    <td>599.7</td>
+                </tr>
+                
+                <tr class="alter">
+                    <td>
+                        <div class="image_with_name">
+                            <img src="img/prd_04.jpg" width=150px height=200px/>
+                            <div>Name of Product</div>
+                        </div>
+                    </td>
+                    <td>Details</td>
+                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td>199.9</td>
+                    <td>599.7</td>
+                </tr> 
+            </tbody>
+			
 		</table>
 	</div>
 	<div id="right_content" class="divider">
-		<div id="price" class="divider roundBorder right_content_element">
+		<div id="price" class="roundBorder right_content_element">
 			<table id="priceDetails" cellspacing="10">
 				<tr>
-					<td style="width:65%; font-size:20px; font-weight:bold;">Item total: </td>
+					<td style="font-size:20px; font-weight:bold;">Item total: </td>
 					<td >HKD</td>
 					<td >0.0</td>
 				</tr>
 				<tr><td>Shipment: </td><td>HKD</td><td>0.0</td></tr>
 				<tr style="height:20px"></tr>
-				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="text-align:right">HKD</td><td>-0.0 (0%)</td></tr>
+				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="color:green">HKD</td><td style="color:green">-0.0 (0%)</td></tr>
 			</table>
 			
-			<div id="promotionalCode" >
+			<div class="promotionalCode" id="promotionalCodeString" >
 				Enter promotional code
 			</div>
+            
+            <div class="promotionalCode" id="promotionalCodeInput" style="display:none">
+				<a id="smallButton" href="">X</a><input type="text" id="pcInput"/><a id="smallButton" href="">APPLY</a>
+			</div>
 		</div>
-		<div class="roundBorder right_content_element"  id="">
-			<table style="width:98%; margin: 5% 1% auto 1%">
+        
+		<div class="right_content_element" >
+			<table style="width:98%; padding: 5% 5%" cellspacing="10">
 				<tr>
-					<td style="width:65%; font-size:20px; font-weight:bold; text-align:right">Total price: </td>
-					<td style="text-align:center">HKD</td>
-					<td style="text-align:center;">0.0</td>
+					<td style="font-size:25px; font-weight:bold;">Total price: </td>
+					<td>HKD</td>
+					<td>0.0</td>
 				</tr>
 			</table>
 		</div>
@@ -83,6 +154,7 @@
         <div class="payment_logos">
             <img src="img/MasterCard_Logo.png" width="100px" height="60px"/>
             <img src="img/visa_Logo.png" width="100px" height="60px"/>
+            <img src="img/eps_logo.png" width="100px" height="60px"/>
         </div>
 	</div>
 </div>
