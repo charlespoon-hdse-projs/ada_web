@@ -1,0 +1,69 @@
+#left_indication {
+    width: 26%;
+    float: left;
+    height: 95%;
+    margin: 1%;
+}
+
+
+#left_indication table th, #left_indication table td {
+    width:15%;
+}
+#left_indication table th:nth-child(2), #left_indication table td:nth-child(2) {
+    width:14%;
+}
+
+#left_indication table th:first-child, #left_indication table td:first-child {
+    width:30%;
+}
+
+#left_indication table th:last-child {
+    width:3%;
+}
+
+
+#item_list {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#checkout_delivery {
+    float: left;
+    width: 67%;
+    height: 90%;
+    margin: 1%;
+    padding: 1% 1%;
+}
+
+#checkout_delivery input[type="radio"] {
+    display: none;
+}
+
+
+#checkout_delivery .option {
+    color: #AAA;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #CCC;
+    
+    font-weight: bolder;
+}
+
+#checkout_delivery .checked {
+    background-color: #009900;
+    color: inherit;
+}
+    
+#checkout_delivery_customer {
+    height: 90%;
+    
+    
+}
+#checkout_delivery_customer table {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
