@@ -45,7 +45,7 @@
         <div id="relativeItem" >
             12345
         </div>
-		<table>
+		<table id="item_list">
             <thead>
                 <tr>
                     <th width="30%">
@@ -58,6 +58,7 @@
                     <th></th>
                 </tr>
             </thead>
+            
             <tbody>
                 <tr>
                     <td>
@@ -67,11 +68,11 @@
                         </div>
                     </td>
                     <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
                     <td>199.9</td>
-                    <td>599.7</td>
+                    <td class="sub_total"></td>
                 </tr>
-                
+
                 <tr class="alter">
                     <td>
                         <div class="image_with_name">
@@ -80,11 +81,11 @@
                         </div>
                     </td>
                     <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
                     <td>199.9</td>
-                    <td>599.7</td>
+                    <td class="sub_total">599.7</td>
                 </tr>                
-                
+
                 <tr>
                     <td>
                         <div class="image_with_name">
@@ -93,11 +94,11 @@
                         </div>
                     </td>
                     <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
                     <td>199.9</td>
-                    <td>599.7</td>
+                    <td class="sub_total">599.7</td>
                 </tr>
-                
+
                 <tr class="alter">
                     <td>
                         <div class="image_with_name">
@@ -106,25 +107,25 @@
                         </div>
                     </td>
                     <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99"/></td>
+                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
                     <td>199.9</td>
-                    <td>599.7</td>
+                    <td class="sub_total">599.7</td>
                 </tr> 
             </tbody>
-			
 		</table>
+            
 	</div>
 	<div id="right_content" class="divider">
 		<div id="price" class="roundBorder right_content_element">
 			<table id="priceDetails" cellspacing="10">
 				<tr>
-					<td style="font-size:20px; font-weight:bold;">Item total: </td>
+					<td style="font-size:20px; font-weight:bold;" >Item total: </td>
 					<td >HKD</td>
-					<td >0.0</td>
+					<td id="ttl_price">0.0</td>
 				</tr>
-				<tr><td>Shipment: </td><td>HKD</td><td>0.0</td></tr>
+				<tr><td>Shipment: </td><td>HKD</td><td id="shipment">0.0</td></tr>
 				<tr style="height:20px"></tr>
-				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="color:green">HKD</td><td style="color:green">-0.0 (0%)</td></tr>
+				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="color:green" id="discount">HKD</td><td style="color:green">-0.0 (<span id="discount_percent">0</span>% off)</td></tr>
 			</table>
 			
 			<div class="promotionalCode" id="promotionalCodeString" >
@@ -141,7 +142,7 @@
 				<tr>
 					<td style="font-size:25px; font-weight:bold;">Total price: </td>
 					<td>HKD</td>
-					<td>0.0</td>
+					<td id="final_price">0.0</td>
 				</tr>
 			</table>
 		</div>

@@ -86,6 +86,15 @@
     width: 150px;
     height: 200px;
 }
+
+.item .item_remove {
+    color: #999;
+    cursor: pointer;
+}
+
+.item .item_remove:hover {
+    color: #111;
+}
 /*#endregion tbody*/
 
 #relativeItem {
@@ -97,6 +106,7 @@
 
 input[type="number"] {
     width:30%;
+    text-align: center;
     background-color: #EEE;
     border: 1px solid #AAA
 }
