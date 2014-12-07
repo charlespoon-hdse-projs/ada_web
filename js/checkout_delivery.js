@@ -1,11 +1,53 @@
+tmp_customer ='{ "name": "Chan Tai Man", "contact_number": "23456789", "address_line1": "Legislative Council Complex","address_line2": "1 Legislative Council Road, Central","address_line3": "Hong Kong"}';
+
+personal_fields = ["#customer_name", "#customer_phone", "#customer_address_line1", "#customer_address_line2", "#customer_address_line3"];
+
+cart_items = '{ "cart_items": [ '+
+                '{ "name": "Mock Neck T-Shirt", "image" : "IDD001.jpg", "price" : 122.5, "amount" : 3}, '+
+                '{ "name": "V-Neck T-Shirt", "image" : "IDD002.jpg", "price" : 132.5, "amount" : 1}, ' +
+                '{ "name": "Slim Fit Jeans", "image" : "IDD007.jpg", "price" : 270.0, "amount" : 2}'+
+             ']}';
+  
+
+
+function restoreDefault() {
+    var fake_customer = JSON.parse(tmp_customer);
+    $("#customer_name").val(fake_customer["name"]);
+    $("#customer_phone").val(fake_customer["contact_number"]);
+    $("#customer_address_line1").val(fake_customer["address_line1"]);
+    $("#customer_address_line2").val(fake_customer["address_line2"]);
+    $("#customer_address_line3").find("option").each(function() {
+        if ($(this).text() === fake_customer["address_line3"]) 
+            $(this).attr("selected", true);
+    });
+    
+    for(var field_name in personal_fields) {
+        $(personal_fields[field_name]).attr("disabled", "disabled");
+    }
+    
+}
+
+function clearForm() {
+    $("#customer_name").val("");
+    $("#customer_phone").val("");
+    $("#customer_address_line1").val("");
+    $("#customer_address_line2").val("");
+    for(var field_name in personal_fields) {
+        $(personal_fields[field_name]).attr("disabled", false);
+    }
+
+}
+
 function calculateSettledSubTotal() {
     var ttl = 0.0;
     $("#item_list").find("tbody tr").each(function() {
         var amt = $(this).find("td:nth-child(2)").html();
         var unit_price = $(this).find("td:nth-child(3)").html();
         var sub_total = parseFloat(amt) * parseFloat(unit_price);
+        
         $(this).find("td:nth-child(4)").html(sub_total);
         ttl += sub_total;
+        
     });
     $("#ttl_price").html(ttl);
     
@@ -13,7 +55,6 @@ function calculateSettledSubTotal() {
     var shipment = $("#shipment").html();
     var discount = parseFloat($("#discount_percent").html())/100;
     if (discount == 0) discount = 1;
-    console.log(shipment);
     
     final_price = (ttl + parseFloat(shipment)) * discount;
     $("#final_price").html(final_price);
@@ -59,10 +100,17 @@ function verify() {
     //delivery 
     var date = $("#customer_delivery_date").val();
     var time = $("#customer_delivery_time").val();
+
+    var parsedDate = new Date(date);
+    var today = new Date();
+    
     
     if (date == null || date.length < 1) {
         $("#customer_delivery_date").addClass("error_field");
         error_msgs[error_msgs.length] = "Missing expected delivery date.";
+    } else if (parsedDate <= today) {
+        $("#customer_delivery_date").addClass("error_field");
+        error_msgs[error_msgs.length] = "Invalid date of delivery.";
     } else {
         $("#customer_delivery_date").removeClass("error_field");
     }
@@ -90,19 +138,49 @@ function verify() {
     }
 }
 
+
+function initialData() {
+    items = JSON.parse(cart_items);
+    items = items['cart_items'];
+    console.log(items.length);
+    for (var i = 0; i < items.length; i++) {
+        var row = "";
+        if ((i+1) % 2 == 0)
+            row = '<tr class="alter">';
+        else
+            row = '<tr>';
+        row += "<td>"+items[i]["name"]+"</td>";
+        row += "<td>"+items[i]["amount"]+"</td>";
+        row += '<td style="display:none">'+items[i]['price']+'</td>';
+        row += '<td class="sub_total"></td>';
+        row += "</tr>";
+        $("#item_list tbody").append(row);
+    }
+}
+
+
 $(document).ready(function() {
     
+    var d = new Date();
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+
+    var today = (day<10 ? '0' : '') + day + '/' + (month<10 ? '0' : '') + month + '/' + d.getFullYear();
+
+    $("#customer_delivery_date").attr("min", today);
     
     $(".option").click(function() {
         var option_id = $(this).attr("id");
-        console.log(option_id);
         $(".option").each(function() {
             var tmp = $(this).attr("id");
             if ( tmp === option_id ) {
                 $(this).addClass("checked");
-                
+                $("#rb" + tmp).attr("checked", "checked");  
+                if (tmp === "default") restoreDefault();
+                else clearForm();
             } else { 
                 $(this).removeClass("checked");
+                $("#rb" + tmp).attr("checked", false);
             }
         });
     });
@@ -113,8 +191,9 @@ $(document).ready(function() {
     });
     
     $("#customer_address_line3").change();
+    $("#default").click();
     
-    calculateSettledSubTotal();
+    calculateSettledSubTotal();    
     
 });
 

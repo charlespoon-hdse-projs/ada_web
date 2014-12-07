@@ -1,22 +1,122 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="css/register.css"></head>
+    <link rel="stylesheet" href="css/register.css">
+
+    <script type="text/javascript">
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+        function check() {
+            var a=true;
+            var fname = document.forms["register"]["fname"].value;
+            var lname = document.forms["register"]["lname"].value;
+            var username = document.forms["register"]["username"].value;
+            var pwd = document.forms["register"]["pwd"].value;
+            var repwd = document.forms["register"]["repwd"].value;
+            var phone = document.forms["register"]["phone"].value;
+            var email = document.forms["register"]["email"].value;
+            if (fname == null || fname == "") {
+                document.forms["register"]["fname"].style.borderColor="red";
+                document.getElementById("msgfname").innerHTML = " Missing";
+                a= false;
+            }else{
+                document.forms["register"]["fname"].style.borderColor="#ccc";
+                document.getElementById("msgfname").innerHTML = "";
+            }
+            if (lname == null || lname == "") {
+                document.forms["register"]["lname"].style.borderColor="red";
+                document.getElementById("msglname").innerHTML = "  Missing";
+                a= false;
+            }else{
+                document.forms["register"]["lname"].style.borderColor="#ccc";
+                document.getElementById("msglname").innerHTML = "";
+            }
+            if (username == null || username == "") {
+                document.forms["register"]["username"].style.borderColor="red";
+                document.getElementById("msgUsername").innerHTML = "  Missing";
+                a= false;
+            }else{
+                document.forms["register"]["username"].style.borderColor="#ccc";
+                document.getElementById("msgUsername").innerHTML = "";
+            }
+            if (pwd == null || pwd == "") {
+                document.forms["register"]["pwd"].style.borderColor="red";
+                document.getElementById("msgPwd").innerHTML = "  Missing";
+                a= false;
+            }else{
+                document.forms["register"]["pwd"].style.borderColor="#ccc";
+                document.getElementById("msgPwd").innerHTML = "";
+            }
+            if (repwd == null || repwd == "") {
+                document.forms["register"]["repwd"].style.borderColor="red";
+                document.getElementById("msgRePwd").innerHTML = "  Missing";
+                a= false;
+            }else{
+                document.forms["register"]["repwd"].style.borderColor="#ccc";
+                document.getElementById("msgRePwd").innerHTML = "";
+            }
+            if (phone == null || phone == "") {
+                document.forms["register"]["phone"].style.borderColor="red";
+                document.getElementById("msgPhone").innerHTML = "  Missing";
+                a= false;
+            }else if(phone.length<8||isNaN(phone)){
+                document.forms["register"]["phone"].style.borderColor="red";
+                document.getElementById("msgPhone").innerHTML = "  Invalid phone format";
+                a= false;
+            }else{
+                document.forms["register"]["phone"].style.borderColor="#ccc";
+                document.getElementById("msgPhone").innerHTML = "";
+            }
+            if (email == null || email == "") {
+                document.forms["register"]["email"].style.borderColor="red";
+                document.getElementById("msgEmail").innerHTML = "  Missing";
+                a= false;
+            }else if(validateEmail(email)==false){
+                document.forms["register"]["email"].style.borderColor="red";
+                document.getElementById("msgEmail").innerHTML = "  Invalid email";
+                a= false;
+            }else{
+                document.forms["register"]["email"].style.borderColor="#ccc";
+                document.getElementById("msgEmail").innerHTML = "";
+            }
+            if (pwd!=repwd) {
+                document.forms["register"]["pwd"].style.borderColor="red";
+                document.forms["register"]["repwd"].style.borderColor="red";
+                document.getElementById("msgRePwd").innerHTML = "  Not match with the password";
+                document.getElementById("msgPwd").innerHTML = "  Not match with the verify password";
+                a= false;
+            }
+            return a;
+        }
+        function confirm(){
+            if(check()!=false){
+                alert("Registration success !");
+              return true;
+            }else{
+                alert("Invalid Submission");
+            return false;
+            }
+        }
+
+    </script>
+</head>
 <body>
-<form id="registerForm">
+<form id="registerForm" name="register" onsubmit="return confirm()">
     <h1>Register</h1>
     <fieldset id="input">
         <table border="0">
-            <tr><td id="tn">First Name :</td><td> <input type="text" name="fname" id="fname" autofocus required/>&nbsp;&nbsp;&nbsp;
-            Last Name : <input type="text" name="lname" id="lname"  required/></td></tr>
-            <tr><td id="tn">Username :</td><td> <input type="text" name="username" id="username" required/></td></tr>
-            <tr><td id="tn">Password : </td><td><input type="password" name="pwd" id="pwd"  required/></td></tr>
-            <tr><td id="tn"> Verify password: </td><td><input type="password" name="repwd" id="repwd"  required/></td></tr>
-            <tr><td id="tn"> Phone number : </td><td><input type="text" name="phone" id="phone"  required/></td></tr>
-            <tr><td id="tn"> Email address :</td><td> <input type="text" name="email" id="email"  required/></td></tr>
+            <tr><td class="tn">First Name :</td><td> <input type="text" name="fname" id="fname" autofocus /><sup><label style="color:red;" id="msgfname" name="msgfname"></label></sup>
+                &nbsp;&nbsp;&nbsp;Last Name : <input type="text" name="lname" id="lname" /><sup><label style="color:red;" id="msglname" name="msglname"></label></sup></td></tr>
+            <tr><td class="tn">Username :</td><td> <input type="text" name="username" id="username" /><sup><label style="color:red;" id="msgUsername" name="msgUsername"></label></sup></td></tr>
+            <tr><td class="tn">Password : </td><td><input type="password" name="pwd" id="pwd" /><sup><label style="color:red;" id="msgPwd" name="msgPwd"></label></sup></td></tr>
+            <tr><td class="tn"> Verify password: </td><td><input type="password" name="repwd" id="repwd"  /><sup><label style="color:red;" id="msgRePwd" name="msgRePwd"></label></sup></td></tr>
+            <tr><td class="tn"> Phone number : </td><td><input type="text" name="phone" id="phone" maxlength="8"/><sup><label style="color:red;" id="msgPhone" name="msgPhone"></label></sup></td></tr>
+            <tr><td class="tn"> Email address :</td><td> <input type="text" name="email" id="email" /><sup><label style="color:red;" id="msgEmail" name="msgEmail"></label></sup></td></tr>
         </table>
     </fieldset>
     <fieldset id="operations">
-        <button type="submit">Register</button>
+        <button type="submit" id="submit">Register</button>
     </fieldset>
     <a href=" " id="foot">Back To Main Page</a>
 </form>
