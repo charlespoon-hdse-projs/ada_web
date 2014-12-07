@@ -27,8 +27,8 @@ scLoadSubCategory = function(subCategory, catJson, fromDir, doneFunc) {
                 } else {
                     var subdir = subJsonUrl;
                     var trim = subdir.lastIndexOf("/");
-                    if (trim > 0) subdir = subdir.substr(0, trim) + 1;
-                    var imgdir = fromDir + "/" + subJsonUrl.substr(0, trim);
+                    if (trim > 0) subdir = subdir.substr(0, trim + 1);
+                    var imgdir = fromDir + "/" + subdir;
                     $.each(json.items, function(i, item) {
                         for (var i = 0; i < item.images.length; i++) item.images[i] = imgdir + item.images[i];
                     });
