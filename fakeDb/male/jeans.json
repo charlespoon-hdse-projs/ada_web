@@ -1,0 +1,83 @@
+{
+  "subcategory": "Jeans",
+  "items": [
+    {
+      "id": "IDD007",
+      "name_en": "Slim Fit Straight Jeans (Selvage)",
+      "images": [
+        "IDD007.jpg",
+        "IDD007_2.jpg",
+        "IDD007_3.jpg",
+        "IDD007_4.jpg",
+        "IDD007_5.jpg"
+      ],
+      "price": 270,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Selvage"
+        },
+        {
+          "tagName": "Shape",
+          "tagValue": "Straight"
+        },
+        {
+          "tagName": "Tightness",
+          "tagValue": "Slim"
+        }
+      ]
+    },
+    {
+      "id": "IDD008",
+      "name_en": "Regular Fit Straight Jeans (Selvage)",
+      "images": [
+        "IDD008.jpg",
+        "IDD008_2.jpg",
+        "IDD008_3.jpg",
+        "IDD008_4.jpg",
+        "IDD008_5.jpg"
+      ],
+      "price": 295,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Selvage"
+        },
+        {
+          "tagName": "Shape",
+          "tagValue": "Straight"
+        },
+        {
+          "tagName": "Tightness",
+          "tagValue": "Regular"
+        }
+      ]
+    },
+    {
+      "id": "IDD009",
+      "name_en": "Loose Fit Tapered Jeans (Selvage)",
+      "images": [
+        "IDD009.jpg",
+        "IDD009_2.jpg",
+        "IDD009_3.jpg",
+        "IDD009_4.jpg",
+        "IDD009_5.jpg"
+      ],
+      "price": 313,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Selvage"
+        },
+        {
+          "tagName": "Shape",
+          "tagValue": "Straight"
+        },
+        {
+          "tagName": "Tightness",
+          "tagValue": "Loose"
+        }
+      ]
+    }
+  ]
+}

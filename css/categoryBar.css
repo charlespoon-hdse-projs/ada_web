@@ -1,0 +1,20 @@
+.category { width: 100%; }
+.categoryItem { width: 25%; background: url("../img/categoryBg.png") no-repeat no-repeat; padding: 10px 30px; color: #eee; font-size: 2em; text-align: center; }
+.subcategory { display: none; padding: 10px 50px; }
+.subcategory .cell { padding: 0; word-spacing: 5em; }
+
+.male { background-color: #425f9c; }
+.female { background-color: #990000; }
+.kids { background-color: #009933; }
+.accessories { background-color: #cc5e00; }
+
+.male.categoryItem a, .female.categoryItem a, .kids.categoryItem a, .accessories.categoryItem a { color: #eee; text-decoration: none; }
+
+.male-sub, .male-sub a { background-color: #6c9bff; color: #000088; text-decoration: none; }
+.male-sub a:hover { color: #0000ff; text-decoration: underline !important; }
+.female-sub, .female-sub a { background-color: #dca8aa; color: #660000; text-decoration: none; }
+.female-sub a:hover { color: #cc0000; text-decoration: underline !important; }
+.kids-sub, .kids-sub a { background-color: #66cc99; color: #003300; text-decoration: none; }
+.kids-sub a:hover { color: #00cc00; text-decoration: underline !important; }
+.accessories-sub, .accessories-sub a { background-color: #ffa04d; color: #7f4513; text-decoration: none; }
+.accessories-sub a:hover { color: #ff9900; text-decoration: underline !important; }

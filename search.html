@@ -2,46 +2,188 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Search Result</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <style>
-        .box { width: 250px; background: linear-gradient(to bottom, #ddd, #bbb); border: 1px #aaa solid; border-radius: 5px; padding: 10px; }
-        .boxSpacing { width: 50px; }
-        .box h1 { font-size: 1em; padding-bottom: 10px; border-bottom: 1px #666 solid; }
-        .seachResult { display: block; min-height: 500px; border: 1px solid; margin-left: 300px; }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/search.css" />
+    <script type="application/javascript" src="js/jquery-1.11.1_min.js"></script>
+    <script type="application/javascript" src="js/StandardLibrary.js"></script>
+    <script type="application/javascript" src="js/SearchController.js"></script>
+    <script type="application/javascript">
+        // load in data
+        var category = StandardLibrary.getUrlParameter("category");
+        var subcategory = StandardLibrary.getUrlParameter("subcategory");
+
+        var asrLoadData = scLoadData(category, subcategory, function(items) {
+            scGenerateViewsAndAppend();
+        });
+
+        $(document).ready(function() {
+            $('.' + category + '-sub').show();
+
+            $("#searchToolsToggleOpen").click(function() {
+                $("#searchToolsToggleOpen").animate({
+                   "left": "-53px"
+                }, 500);
+                $("#searchTools").animate({
+                    "margin-left": "0"
+                }, 500);
+                $("#searchResult").animate({
+                    "margin-left": "290px"
+                }, 500);
+            });
+            $("#searchToolsToggleClose").click(function() {
+                $("#searchToolsToggleOpen").animate({
+                    "left": "0"
+                }, 500);
+                $("#searchTools").animate({
+                    "margin-left": "-340px"
+                }, 500);
+                $("#searchResult").animate({
+                    "margin-left": "0"
+                }, 500);
+            });
+            $("#btnBigView").click(function() {
+                $("#searchResult > .bigView").show();
+                $("#searchResult > .detailView").hide();
+            });
+            $("#btnDetailView").click(function() {
+                $("#searchResult > .bigView").hide();
+                $("#searchResult > .detailView").show();
+            });
+            $("#filter").click(function() {
+                scRefreshTagStoreToShow();
+            });
+            $("#selectAllFilters").click(function() {
+                $("fieldset.filter input[type=checkbox]").each(function(i, item) {
+                   item.checked = true;
+                });
+            });
+            $("#selectNoneFilters").click(function() {
+                $("fieldset.filter input[type=checkbox]").each(function(i, item) {
+                    item.checked = false;
+                });
+            });
+        });
+    </script>
 </head>
 <body>
+<header>
+    <div class="headbar">
+        <div class="headbarInner">
+            Welcome, user.
+            <div class="right">Login | Register</div>
+        </div>
+    </div>
+    <div class="logoSearch">
+        <img src="img/logo.png" alt="logo" title="Back to Home page" />
+        <div class="right" id="searchbox">
+            <input type="text" name="criteria" placeholder="Search a product" />
+            <button type="submit">Search</button>
+        </div>
+    </div>
+    <div class="table category">
+        <div class="cell categoryItem male"><a href="search.html?category=male">Male</a></div>
+        <div class="cell categoryItem female"><a href="search.html?category=female">Female</a></div>
+        <div class="cell categoryItem kids"><a href="search.html?category=kids">Kids</a></div>
+        <div class="cell categoryItem accessories"><a href="search.html?category=accessories">Accessories</a></div>
+    </div>
+    <div class="subcategory male-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=jacket-coats">Jacket/Coats</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=shirts">Shirts</a>
+                <a href="search.html?category=male&subcategory=polos">Polos</a>
+                <a href="search.html?category=male&subcategory=suits">Suits</a>
+                <a href="search.html?category=male&subcategory=t-shirts">T-Shirts</a></div>
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=trousers">Trousers</a>
+                <a href="search.html?category=male&subcategory=chinos">Chinos</a>
+                <a href="search.html?category=male&subcategory=jeans">Jeans</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory female-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=female&subcategory=basics">Basics</a>
+                <a href="search.html?category=female&subcategory=shirts">Shirts</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=female&subcategory=blazers">Blazers</a>
+                <a href="search.html?category=female&subcategory=trousers">Trousers</a>
+                <a href="search.html?category=female&subcategory=jeans">Jeans</a>
+                <a href="search.html?category=female&subcategory=dressers">Dressers</a>
+                <a href="search.html?category=female&subcategory=skirts">Skirts</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory kids-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=kids&subcategory=t-shirts">T-Shirts</a>
+                <a href="search.html?category=kids&subcategory=one-pieces">One-Pieces</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=kids&subcategory=sweaters">Sweaters</a>
+                <a href="search.html?category=kids&subcategory=jackets">Jackets</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory accessories-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=hats">Hats</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=bells">Bells</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=scarves">Scarves</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=others">Others</a>
+            </div>
+        </div>
+    </div>
+</header>
 <content>
-    <div class="left box" id="saerchTools">
-        <h1>title</h1>
-        test
+    <span id="searchResultStat">
+        <span id="found"></span>
+        <span id="displayModeSelect" class="right">
+            Display Modes&nbsp;
+            <div id="btnBigView" class="box">Big View</div>
+            <div id="btnDetailView" class="box">Detail View</div>
+        </span>
+    </span>
+    <br />
+    <br class="clear"/>
+
+    <div id="searchToolsToggleOpen">
+        Open Filter<!-- as fallback text for some people who needs accessibility assistance -->
     </div>
-    <div class="seachResult">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut fringilla mi. Cras viverra dui rhoncus neque tempus vestibulum. Vivamus lobortis dui sed scelerisque interdum. Praesent facilisis libero non ligula tincidunt, vel egestas purus elementum. Aliquam pulvinar dolor nec ipsum tempor semper ac non erat. Sed placerat condimentum lorem ac feugiat. Aliquam fringilla enim sed neque dictum, et porttitor nisi accumsan.
-
-        Aenean ultricies non neque a sollicitudin. Aenean non tellus lorem. Sed eleifend dui a nisl consectetur, id aliquet neque mattis. Cras a risus commodo, elementum felis sit amet, suscipit ex. Curabitur aliquam blandit sollicitudin. Etiam eget dictum neque. Quisque aliquam lacus non cursus fringilla. Fusce quis condimentum orci. Sed bibendum vestibulum ipsum, non rutrum enim. Quisque hendrerit vitae massa in scelerisque. Etiam quis nulla a tellus tristique ultrices. Pellentesque scelerisque, justo et porttitor tincidunt, sem turpis laoreet lectus, nec sagittis diam metus quis nibh. Pellentesque ac libero sollicitudin, pharetra metus ut, maximus justo. Aliquam molestie dolor ut viverra facilisis. In diam metus, porta sit amet nibh rhoncus, cursus tempus nisi.
-
-        Aenean commodo lectus magna, et dictum urna lacinia id. Curabitur dictum, turpis in auctor vestibulum, turpis nisl tincidunt tellus, a auctor ligula felis condimentum diam. Phasellus a dictum erat. Nunc convallis nulla sed rutrum cursus. Mauris volutpat rhoncus porta. In faucibus consectetur venenatis. Aliquam ullamcorper facilisis luctus.
-
-        Praesent lobortis velit et elementum luctus. In eu ante sapien. Mauris a sapien vulputate, consequat purus quis, sodales dolor. Nullam aliquet leo felis, nec accumsan risus congue ut. Nunc dapibus lacus sed ante porta, sit amet laoreet orci gravida. Donec eleifend, eros non luctus fringilla, neque ex rutrum nibh, in venenatis urna elit vel velit. Suspendisse a maximus tellus, a imperdiet urna. Nunc vel odio eget purus mollis accumsan. Morbi sed vehicula risus.
-
-        Praesent ornare risus id ex dignissim porttitor. Aenean et pretium nisl. Mauris nibh dolor, consectetur vitae lacinia quis, congue at nisl. Sed dapibus risus consequat, porttitor dui eu, viverra nunc. Donec at nunc eget sem lacinia commodo eget ultricies felis. Sed vel bibendum orci. Nulla laoreet, neque id convallis eleifend, metus velit commodo purus, et lobortis orci neque quis dolor. Morbi mattis ultricies euismod. In ac ornare turpis. Donec dictum mi lectus. Suspendisse ultrices placerat sagittis. Etiam in nisi ac tellus pretium semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-        Quisque pharetra pretium eros, eget tempus orci egestas sed. Aenean sollicitudin elementum finibus. In dolor nibh, scelerisque vitae volutpat quis, imperdiet vulputate neque. Suspendisse potenti. Nullam ornare diam et blandit dapibus. Nam venenatis rhoncus sapien, quis sagittis risus mattis ac. Duis sed laoreet arcu. Mauris ac justo ut odio mattis consequat nec quis libero. Nam auctor pulvinar nunc hendrerit semper. Morbi commodo enim non augue ornare euismod. Ut aliquet fringilla tincidunt. Sed faucibus nulla dui, commodo tincidunt leo euismod ac. Nam interdum lorem feugiat dictum imperdiet. Phasellus bibendum dui eu velit gravida convallis. Aliquam aliquam, tortor id finibus porta, est lorem suscipit libero, vitae dignissim tortor mauris in eros.
-
-        Proin faucibus, augue at elementum molestie, felis arcu faucibus quam, et facilisis ex enim ac eros. Vestibulum sollicitudin felis viverra tincidunt sollicitudin. Sed convallis tempus felis, at sollicitudin nisi vestibulum non. Mauris blandit eget metus in porta. Quisque eu malesuada arcu. Donec mollis nibh vel tellus varius, non varius ipsum sodales. Curabitur vitae hendrerit risus, vel mattis neque.
-
-        Etiam posuere orci id est scelerisque rhoncus vitae ac velit. Etiam consectetur, diam vitae condimentum eleifend, metus justo posuere erat, ut commodo augue ipsum a risus. Phasellus ut venenatis ante, a faucibus odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis diam enim. Fusce vehicula metus laoreet nisi dignissim, et sagittis neque lobortis. Proin pretium purus vehicula velit ornare, sed dictum velit rutrum.
-
-        Aliquam scelerisque sit amet magna pharetra bibendum. Donec condimentum nunc in turpis pretium efficitur. Nullam vitae ullamcorper ex. Sed maximus risus magna, a lacinia lectus pretium eget. Etiam tincidunt suscipit hendrerit. Suspendisse vehicula, lacus nec ullamcorper faucibus, purus eros efficitur odio, quis dignissim arcu sem eget odio. Etiam arcu massa, maximus vel massa vel, aliquam vulputate nibh. Etiam viverra odio eget turpis tempus efficitur. Proin scelerisque nunc nisi, quis auctor diam ullamcorper non. Proin semper elementum mattis. Nam vel tellus maximus, accumsan dolor quis, suscipit nibh. Proin eu enim eget lectus imperdiet consequat.
-
-        Donec ut ultricies lectus. Integer non dictum nisl. Sed id ultrices erat. Proin elementum justo vel risus pretium convallis. Vestibulum pretium massa massa. Donec elementum cursus metus, sed auctor ante posuere ut. Fusce laoreet enim eget lorem finibus, et congue turpis molestie. Cras quis leo odio. Proin hendrerit, nisl eget cursus sagittis, nibh dui volutpat nisi, at commodo erat dui et lectus. In consequat justo eu arcu placerat, a pulvinar orci egestas. Morbi neque velit, placerat eget iaculis aliquam, sagittis in mauris. Pellentesque auctor dui ante, a aliquet urna commodo vel. Etiam rutrum egestas dapibus. Aenean finibus ut purus nec congue. Phasellus accumsan dapibus consequat.
+    <div class="left box" id="searchTools">
+        <div class="right" id="searchToolsToggleClose">Close</div>
+        <h1>Filter</h1>
+        <div id="fieldsets"></div>
+        <button id="filter" class="red">Filter Results</button>
+        <button id="selectAllFilters">All</button>
+        <button id="selectNoneFilters">None</button>
     </div>
-    <br class="clear" />
+    <div id="searchResult">
+        <div class="bigView">
+            <div class="bigViewWrapper"></div>
+        </div>
+        <div class="detailView"></div>
+    </div>
+    <!--<br class="clear" />-->
 </content>
 <footer>
-    Donec ut ultricies lectus. Integer non dictum nisl. Sed id ultrices erat. Proin elementum justo vel risus pretium convallis. Vestibulum pretium massa massa. Donec elementum cursus metus, sed auctor ante posuere ut. Fusce laoreet enim eget lorem finibus, et congue turpis molestie. Cras quis leo odio. Proin hendrerit, nisl eget cursus sagittis, nibh dui volutpat nisi, at commodo erat dui et lectus. In consequat justo eu arcu placerat, a pulvinar orci egestas. Morbi neque velit, placerat eget iaculis aliquam, sagittis in mauris. Pellentesque auctor dui ante, a aliquet urna commodo vel. Etiam rutrum egestas dapibus. Aenean finibus ut purus nec congue. Phasellus accumsan dapibus consequat.
+    &copy; 1995 - 2014 TopSales Corporation
+    <div class="right">
+        test
+    </div>
 </footer>
 </body>
 </html>

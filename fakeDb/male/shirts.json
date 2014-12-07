@@ -1,0 +1,74 @@
+{
+  "subcategory": "Shirts",
+  "items": [
+    {
+      "id": "IDD016",
+      "name_en": "Flannel Check Long Sleeve Shirt",
+      "images": [
+        "IDD016.jpg",
+        "IDD016_2.jpg",
+        "IDD016_3.jpg",
+        "IDD016_4.jpg"
+      ],
+      "price": 140,
+      "tag": [
+        {
+          "tagName": "Stripes",
+          "tagValue": "Flannel Check"
+        },
+        {
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    },
+    {
+      "id": "IDD017",
+      "name_en": "Extra Fine Cotton Broadcloth Check Long Sleeve Shirt",
+      "images": [
+        "IDD017.jpg",
+        "IDD017_2.jpg",
+        "IDD017_3.jpg"
+      ],
+      "price": 140,
+      "tag": [
+        {
+          "tagName": "Fineness",
+          "tagValue": "Extra Fine"
+        },
+        {
+          "tagName": "Stripes",
+          "tagValue": "Flannel Check"
+        },
+        {
+          "tagName": "Texture",
+          "tagValue": "Cotton"
+        },
+        {
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    },
+    {
+      "id": "IDD018",
+      "name_en": "Super Non-Iron Long Sleeve Shirt",
+      "images": [
+        "IDD018.jpg",
+        "IDD018_2.jpg",
+        "IDD018_3.jpg"
+      ],
+      "price": 140,
+      "tag": [
+        {
+          "tagName": "Non-Iron",
+          "tagValue": "Non-Iron"
+        },
+        {
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    }
+  ]
+}

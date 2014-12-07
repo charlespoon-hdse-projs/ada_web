@@ -1,0 +1,79 @@
+{
+  "subcategory": "Trousers",
+  "items": [
+    {
+      "id": "IDD010",
+      "name_en": "Wool Blended Slim Fit Flat Front Trousers",
+      "images": [
+        "IDD010.jpg",
+        "IDD010_2.jpg",
+        "IDD010_3.jpg",
+        "IDD010_4.jpg",
+        "IDD010_5.jpg"
+      ],
+      "price": 250,
+      "tag": [
+        {
+          "tagName": "stripes",
+          "tagValue": "Wool Blended"
+        },
+        {
+          "tagName": "Shape of Trouser Leg",
+          "tagValue": "Flat Front"
+        },
+        {
+          "tagName": "Tightness",
+          "tagValue": "Slim"
+        }
+      ]
+    },
+    {
+      "id": "IDD011",
+      "name_en": "Slim Fit Chino Flat Front Trousers",
+      "images": [
+        "IDD011.jpg",
+        "IDD011_2.jpg",
+        "IDD011_3.jpg",
+        "IDD011_4.jpg",
+        "IDD011_5.jpg"
+      ],
+      "price": 320,
+      "tag": [
+        {
+          "tagName": "Shape of Trouser Leg",
+          "tagValue": "Flat Front"
+        },
+        {
+          "tagName": "Tightness",
+          "tagValue": "Slim Fit Chino"
+        }
+      ]
+    },
+    {
+      "id": "IDD012",
+      "name_en": "Vintage Regular Fit Chino Flat Front Trousers",
+      "images": [
+        "IDD012.jpg",
+        "IDD012_2.jpg",
+        "IDD012_3.jpg",
+        "IDD012_4.jpg",
+        "IDD012_5.jpg"
+      ],
+      "price": 345,
+      "tag": [
+        {
+          "tagName": "Color",
+          "tagValue": "Vintage"
+        },
+        {
+          "tagName": "Shape of Trouser Leg",
+          "tagValue": "Flat Front"
+        },
+        {
+          "tagName": "Tightness",
+          "tagValue": "Regular Fit Chino"
+        }
+      ]
+    }
+  ]
+}

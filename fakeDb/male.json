@@ -1,0 +1,11 @@
+{
+    "category": "male",
+    "subcategories": [
+        {"subName": "jacket-coats", "jsonUrl": "male/jacketCoats.json"},
+        {"subName": "jeans", "jsonUrl": "male/jeans.json"},
+        {"subName": "polos", "jsonUrl": "male/polos.json"},
+        {"subName": "shirts", "jsonUrl": "male/shirts.json"},
+        {"subName": "t-shirts", "jsonUrl": "male/t-shirts.json"},
+        {"subName": "trousers", "jsonUrl": "male/trousers.json"}
+    ]
+}
