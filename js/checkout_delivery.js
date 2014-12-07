@@ -100,10 +100,17 @@ function verify() {
     //delivery 
     var date = $("#customer_delivery_date").val();
     var time = $("#customer_delivery_time").val();
+
+    var parsedDate = new Date(date);
+    var today = new Date();
+    
     
     if (date == null || date.length < 1) {
         $("#customer_delivery_date").addClass("error_field");
         error_msgs[error_msgs.length] = "Missing expected delivery date.";
+    } else if (parsedDate <= today) {
+        $("#customer_delivery_date").addClass("error_field");
+        error_msgs[error_msgs.length] = "Invalid date of delivery.";
     } else {
         $("#customer_delivery_date").removeClass("error_field");
     }
@@ -153,6 +160,14 @@ function initialData() {
 
 
 $(document).ready(function() {
+    
+    var d = new Date();
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+
+    var today = (day<10 ? '0' : '') + day + '/' + (month<10 ? '0' : '') + month + '/' + d.getFullYear();
+
+    $("#customer_delivery_date").attr("min", today);
     
     $(".option").click(function() {
         var option_id = $(this).attr("id");
