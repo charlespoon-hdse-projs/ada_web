@@ -1,0 +1,66 @@
+
+{
+  "subcategory": "Skirt",
+  "items": [
+    {
+      "id": "IDD031",
+      "name_en": "Knit Flare Skirt",
+      "images": [
+        "IDD031.jpg",
+        "IDD031_2.jpg",
+        "IDD031_3.jpg",
+	"IDD031_4.jpg",
+	"IDD031_5.jpg"
+      ],
+      "price": 190.0,
+      "tag": [
+        {
+          "tagName": "Skirt type",
+          "tagValue": "Knit Flare"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD032",
+      "name_en": "HEATTECH Knit Skirt",
+      "images": [
+        "IDD032.jpg",
+        "IDD032_2.jpg",
+        "IDD032_3.jpg",
+	"IDD032_4.jpg",
+	"IDD032_5.jpg"
+      ],
+      "price": 140.0,
+      "tag": [
+        {
+          "tagName": "Skirt type",
+          "tagValue": "Knit"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD033",
+      "name_en": "Chiffon Pleated Mini Skirt",
+      "images": [
+        "IDD033.jpg",
+        "IDD033_2.jpg",
+        "IDD033_3.jpg",
+	"IDD033_4.jpg",
+	"IDD033_5.jpg"
+      ],
+      "price": 170.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Chiffon"
+        },
+	{
+          "tagName": "Skirt type",
+          "tagValue": "Pleated Mini"
+        }
+      ]
+    }
+  ]
+}

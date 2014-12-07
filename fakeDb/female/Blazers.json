@@ -1,0 +1,65 @@
+
+
+
+{
+  "subcategory": "Blazers",
+  "items": [
+    {
+      "id": "IDD037",
+      "name_en": "UF Long Sleeve Blazers",
+      "images": [
+        "IDD037.jpg",
+        "IDD037_2.jpg",
+        "IDD037_3.jpg",
+	"IDD037_4.jpg",
+	"IDD037_5.jpg"
+      ],
+      "price": 240.0,
+      "tag": [
+        {
+          "tagName": "Sleeve length",
+          "tagValue": "Long"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD038",
+      "name_en": "+J Wool Wrap Blazers",
+      "images": [
+        "IDD038.jpg",
+        "IDD038_2.jpg",
+        "IDD038_3.jpg",
+	"IDD038_4.jpg",
+	"IDD038_5.jpg"
+      ],
+      "price": 199.0,
+      "tag": [
+        {
+          "tagName": "Blazer type",
+          "tagValue": "Wrap"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD039",
+      "name_en": "Body Warm Lite Down Blazers",
+      "images": [
+        "IDD039.jpg",
+        "IDD039_2.jpg",
+        "IDD039_3.jpg",
+	"IDD039_4.jpg",
+	"IDD039_5.jpg"
+      ],
+      "price": 199.0,
+      "tag": [
+        {
+          "tagName": "Blazer Style",
+          "tagValue": "Lite Down"
+        }
+      ]
+    }
+  ]
+}
+

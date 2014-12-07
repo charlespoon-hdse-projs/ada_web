@@ -1,0 +1,38 @@
+{
+  "subcategory": "Basics",
+  "items": [
+    {
+      "id": "IDD043",
+      "name_en": "Fine-knit jumper",
+      "images": [
+        "IDD043.jpg",
+        "IDD043_2.jpg",
+        "IDD043_3.jpg",
+      ],
+      "price": 199.0,
+      "tag": [
+       	{
+          "tagName": "Texture",
+          "tagValue": "Fine-knit"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD044",
+      "name_en": "Sweatshirt",
+      "images": [
+        "IDD044.jpg",
+        "IDD044_2.jpg",
+        "IDD044_3.jpg",
+      ],
+      "price": 129.0,
+      "tag": [
+        {
+          "tagName": "Color",
+          "tagValue": "white"
+        }
+      ]
+    }
+  ]
+}

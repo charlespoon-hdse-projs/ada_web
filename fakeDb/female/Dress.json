@@ -1,0 +1,80 @@
+
+
+
+{
+  "subcategory": "Dress",
+  "items": [
+    {
+      "id": "IDD040",
+      "name_en": "Extra Fine Merino Polo Neck Dress",
+      "images": [
+        "IDD040.jpg",
+        "IDD040_2.jpg",
+        "IDD040_3.jpg",
+	"IDD040_4.jpg",
+	"IDD040_5.jpg"
+      ],
+      "price": 230.0,
+      "tag": [
+        {
+          "tagName": "Fineness",
+          "tagValue": "Extra Fine"
+        },
+	{
+          "tagName": "Texture",
+          "tagValue": "Merino"
+        },
+	{
+          "tagName": "Neck Type",
+          "tagValue": "Polo neck"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD041",
+      "name_en": "Silk Sleeveless Dress",
+      "images": [
+        "IDD041.jpg",
+        "IDD041_2.jpg",
+        "IDD041_3.jpg",
+	"IDD041_4.jpg",
+	"IDD041_5.jpg"
+      ],
+      "price": 230.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Silk"
+        },
+	{
+          "tagName": "Sleeve Length",
+          "tagValue": "Sleeveless"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD042",
+      "name_en": "Ines Silk Long Sleeve Dress",
+      "images": [
+        "IDD042.jpg",
+        "IDD042_2.jpg",
+        "IDD042_3.jpg",
+	"IDD042_4.jpg",
+	"IDD042_5.jpg"
+      ],
+      "price": 210.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Silk"
+        },
+	{
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    }
+  ]
+}

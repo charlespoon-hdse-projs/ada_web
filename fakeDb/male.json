@@ -6,6 +6,7 @@
         {"subName": "polos", "jsonUrl": "male/polos.json"},
         {"subName": "shirts", "jsonUrl": "male/shirts.json"},
         {"subName": "t-shirts", "jsonUrl": "male/t-shirts.json"},
-        {"subName": "trousers", "jsonUrl": "male/trousers.json"}
+        {"subName": "trousers", "jsonUrl": "male/trousers.json"},
+	{"subName": "suits", "jsonUrl": "male/Suits.json"}
     ]
 }

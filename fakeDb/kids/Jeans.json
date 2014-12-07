@@ -1,0 +1,39 @@
+
+{
+  "subcategory": "Jeans",
+  "items": [
+    {
+      "id": "IDD056",
+      "name_en": "KIDS Slim Fit Jeans",
+      "images": [
+        "IDD056.jpg",
+        "IDD056_2.jpg",
+        "IDD056_3.jpg",
+      ],
+      "price": 110.0,
+      "tag": [
+       	{
+          "tagName": "Tightness",
+          "tagValue": "Slim Fit"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD057",
+      "name_en": "UNISEX Regular Fit Jeans",
+      "images": [
+        "IDD057.jpg",
+        "IDD057_2.jpg",
+        "IDD057_3.jpg",
+      ],
+      "price": 130.0,
+      "tag": [
+        {
+          "tagName": "Tightness",
+          "tagValue": "Regular Fit"
+        }
+      ]
+    }
+  ]
+}

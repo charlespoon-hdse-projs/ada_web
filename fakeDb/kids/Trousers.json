@@ -1,0 +1,39 @@
+
+{
+  "subcategory": "Trousers",
+  "items": [
+    {
+      "id": "IDD054",
+      "name_en": "KIDS Warm Lined Trousers",
+      "images": [
+        "IDD054.jpg",
+        "IDD054_2.jpg",
+        "IDD054_3.jpg",
+      ],
+      "price": 100.0,
+      "tag": [
+       	{
+          "tagName": "Trousers type",
+          "tagValue": "Lined"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD055",
+      "name_en": "KIDS Twill Easy Trousers",
+      "images": [
+        "IDD055.jpg",
+        "IDD055_2.jpg",
+        "IDD055_3.jpg",
+      ],
+      "price": 100.0,
+      "tag": [
+        {
+          "tagName": "Trousers type",
+          "tagValue": "Easy"
+        }
+      ]
+    }
+  ]
+}

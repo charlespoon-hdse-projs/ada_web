@@ -1,0 +1,73 @@
+{
+  "subcategory": "Shirt",
+  "items": [
+    {
+      "id": "IDD025",
+      "name_en": "Flannel Check Long Sleeve Shirt",
+      "images": [
+        "IDD025.jpg",
+        "IDD025_2.jpg",
+        "IDD025_3.jpg",
+	"IDD025_4.jpg",
+	"IDD025_5.jpg"
+      ],
+      "price": 140.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Flannel"
+        },
+	{
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD026",
+      "name_en": "Oxford Long Sleeve Shirt",
+      "images": [
+        "IDD026.jpg",
+        "IDD026_2.jpg",
+        "IDD026_3.jpg",
+	"IDD026_4.jpg",
+	"IDD026_5.jpg"
+      ],
+      "price": 150.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Oxford"
+        },
+	{
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD027",
+      "name_en": "Oxford Long Sleeve Shirt",
+      "images": [
+        "IDD027.jpg",
+        "IDD027_2.jpg",
+        "IDD027_3.jpg",
+	"IDD027_4.jpg",
+	"IDD027_5.jpg"
+      ],
+      "price": 137.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Oxford"
+        },
+	{
+          "tagName": "Sleeve Length",
+          "tagValue": "Long"
+        }
+      ]
+    }
+  ]
+}

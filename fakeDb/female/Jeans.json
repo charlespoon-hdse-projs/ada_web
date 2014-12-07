@@ -1,0 +1,71 @@
+
+{
+  "subcategory": "Jeans",
+  "items": [
+    {
+      "id": "IDD028",
+      "name_en": "Ultra Stretch Jeans - High rise",
+      "images": [
+        "IDD028.jpg",
+        "IDD028_2.jpg",
+        "IDD028_3.jpg",
+	"IDD028_4.jpg",
+	"IDD028_5.jpg"
+      ],
+      "price": 290.0,
+      "tag": [
+        {
+          "tagName": "Tightness",
+          "tagValue": "Ultra Stretch"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD029",
+      "name_en": "Slim Boyfriend Fit Ankle Length Jeans",
+      "images": [
+        "IDD029.jpg",
+        "IDD029_2.jpg",
+        "IDD029_3.jpg",
+	"IDD029_4.jpg",
+	"IDD029_5.jpg"
+      ],
+      "price": 312.0,
+      "tag": [
+        {
+          "tagName": "Tightness",
+          "tagValue": "Slim"
+        },
+	{
+          "tagName": "Length",
+          "tagValue": "Ankle length"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD030",
+      "name_en": "Skinny Fit Tapered Jeans",
+      "images": [
+        "IDD030.jpg",
+        "IDD030_2.jpg",
+        "IDD030_3.jpg",
+	"IDD030_4.jpg",
+	"IDD030_5.jpg"
+      ],
+      "price": 340.0,
+      "tag": [
+        {
+          "tagName": "Tightness",
+          "tagValue": "Skinny"
+        },
+	{
+          "tagName": "Shape",
+          "tagValue": "Tapered"
+        }
+      ]
+    }
+  ]
+}
+

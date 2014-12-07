@@ -1,0 +1,70 @@
+{
+  "subcategory": "Suits",
+  "items": [
+    {
+      "id": "IDD019",
+      "name_en": "Hechter Beige Notch Lapel Suit",
+      "images": [
+        "IDD019.jpg",
+        "IDD019_2.jpg",
+        "IDD019_3.jpg",
+        "IDD019_4.jpg"
+      ],
+      "price": 1690.0,
+      "tag": [
+        {
+          "tagName": "Color",
+          "tagValue": "Beige"
+        },
+	{
+          "tagName": "Suit type",
+          "tagValue": "Notch Lapel"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD020",
+      "name_en": "Samuel Slater Luxury Regular Fit Check Blue Suit",
+      "images": [
+        "IDD020.jpg",
+        "IDD020_2.jpg",
+        "IDD020_3.jpg",
+        "IDD020_4.jpg"
+      ],
+      "price": 1990.0,
+      "tag": [
+        {
+          "tagName": "Color",
+          "tagValue": "Blue"
+        },
+	{
+          "tagName": "Suit type",
+          "tagValue": "Regular Fit"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD021",
+      "name_en": "Fellini Tailored Wool Blend Navy Three Suit",
+      "images": [
+        "IDD021.jpg",
+        "IDD021_2.jpg",
+        "IDD021_3.jpg",
+        "IDD021_4.jpg"
+      ],
+      "price": 1780.0,
+      "tag": [
+        {
+          "tagName": "Color",
+          "tagValue": "Navy"
+        },
+	{
+          "tagName": "Suit type",
+          "tagValue": "Tailored Fit"
+        }
+      ]
+    }
+  ]
+}

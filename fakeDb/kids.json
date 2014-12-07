@@ -1,0 +1,12 @@
+{
+    "category": "kids",
+    "subcategories": [
+        {"subName": "dresses", "jsonUrl": "kids/Dress.json"},
+        {"subName": "jackets", "jsonUrl": "kids/jackets.json"},
+        {"subName": "jeans", "jsonUrl": "kids/Jeans.json"},
+        {"subName": "one-pieces", "jsonUrl": "kids/Onepiece.json"},
+        {"subName": "skirts", "jsonUrl": "kids/Skirt.json"},
+        {"subName": "sweaters", "jsonUrl": "kids/Sweaters.json"},
+	{"subName": "trousers", "jsonUrl": "kids/Trousers.json"}
+    ]
+}

@@ -1,0 +1,67 @@
+
+
+{
+  "subcategory": "Trousers",
+  "items": [
+    {
+      "id": "IDD034",
+      "name_en": "Track Ankle Length Trousers",
+      "images": [
+        "IDD034.jpg",
+        "IDD034_2.jpg",
+        "IDD034_3.jpg",
+	"IDD034_4.jpg",
+	"IDD034_5.jpg"
+      ],
+      "price": 170.0,
+      "tag": [
+        {
+          "tagName": "Length",
+          "tagValue": "Ankle length"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD035",
+      "name_en": "Modal Sweat Trousers",
+      "images": [
+        "IDD035.jpg",
+        "IDD035_2.jpg",
+        "IDD035_3.jpg",
+	"IDD035_4.jpg",
+	"IDD035_5.jpg"
+      ],
+      "price": 182.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Modal"
+        }
+      ]
+    },
+
+    {
+      "id": "IDD036",
+      "name_en": "Stretch Jersey Ankle Trousers",
+      "images": [
+        "IDD036.jpg",
+        "IDD036_2.jpg",
+        "IDD036_3.jpg",
+	"IDD036_4.jpg",
+	"IDD036_5.jpg"
+      ],
+      "price": 182.0,
+      "tag": [
+        {
+          "tagName": "Tightness",
+          "tagValue": "Stretch"
+        },
+	{
+          "tagName": "Length",
+          "tagValue": "Ankle length"
+        }
+      ]
+    }
+  ]
+}

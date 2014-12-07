@@ -1,0 +1,43 @@
+
+
+
+
+
+{
+  "subcategory": "Skirt",
+  "items": [
+    {
+      "id": "IDD060",
+      "name_en": "GIRLS Warm Lined Mini Skirt",
+      "images": [
+        "IDD060.jpg",
+        "IDD060_2.jpg",
+        "IDD060_3.jpg",
+      ],
+      "price": 140.0,
+      "tag": [
+       	{
+          "tagName": "Skirt type",
+          "tagValue": "Lined"
+        }
+      ]
+    },
+ 
+    {
+      "id": "IDD061",
+      "name_en": "GIRLS Corduroy Skirt",
+      "images": [
+        "IDD061.jpg",
+        "IDD061_2.jpg",
+        "IDD061_3.jpg",
+      ],
+      "price": 132.0,
+      "tag": [
+        {
+          "tagName": "Texture",
+          "tagValue": "Corduroy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "category": "female",
+    "subcategories": [
+        {"subName": "basics", "jsonUrl": "female/Basics.json"},
+        {"subName": "blazers", "jsonUrl": "female/Blazers.json"},
+        {"subName": "Dresses", "jsonUrl": "female/Dress.json"},
+        {"subName": "jeans", "jsonUrl": "female/jeans.json"},
+        {"subName": "shirts", "jsonUrl": "female/shirts.json"},
+	{"subName": "skirts", "jsonUrl": "female/Skirt.json"},
+	{"subName": "tops", "jsonUrl": "female/Tops.json"},
+        {"subName": "trousers", "jsonUrl": "female/trousers.json"}
+    ]
+}
