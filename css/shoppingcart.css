@@ -30,19 +30,19 @@
 /*#endregion thead*/
 
 /*#region Widht of Columns*/
-.item table th, .item table td {
+.item > table th, .item table td {
     width:10%;
 }
 
-.item table th:nth-child(2), .item table td:nth-child(2) {
+.item > table th:nth-child(2), .item table td:nth-child(2) {
     width:30%;
 }
 
-.item table th:first-child, .item table td:first-child {
+.item > table th:first-child, .item table td:first-child {
     width:30%;
 }
 
-.item table th:last-child {
+.item > table th:last-child {
     width:1.5%;
 }
 
@@ -131,6 +131,7 @@ input[type="number"] {
 
 .divider  #progressBar {width:98%;height:10%; /*ttl:22*/margin: 1% 1%;}
 .options {text-align: center; margin-top:5%;}
+.options > a { width:36%; }
 .payment_logos {margin: 0 3%;margin-top : 10%;text-align: center;}
 .payment_logos img {
     width:90px;

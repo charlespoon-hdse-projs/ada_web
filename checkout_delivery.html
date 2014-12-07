@@ -59,50 +59,74 @@
                     <tr>
                         <td>Name of Product</td>
                         <td>3</td>
+                        <td style="display:none">199.9</td>
                         <td class="sub_total"></td>
                     </tr>
 
                     <tr class="alter">
                         <td>Name of Product</td>
                         <td>3</td>
+                        <td style="display:none">199.9</td>
                         <td class="sub_total"></td>
                     </tr>                
 
                     <tr>
                         <td>Name of Product</td>
                         <td>3</td>
+                        <td style="display:none">199.9</td>
                         <td class="sub_total"></td>
                     </tr>
 
                     <tr class="alter">
                         <td>Name of Product</td>
                         <td>3</td>
+                        <td style="display:none">199.9</td>
                         <td class="sub_total"></td>
                     </tr> 
+                    
+                    <tr>
+                        <td>Name of Product</td>
+                        <td>3</td>
+                        <td style="display:none">199.9</td>
+                        <td class="sub_total"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         
         <div id="checkout_delivery" class="roundBorder">
-            <span>Please provide the delivery information.</span>
-            
-                <div>
-                    <label id="default" class="option">Default</label>
+                <div id="checkout_delivery_options">
+                    <label id="default" class="option checked">Default</label>
                     <label id="custom" class="option">Custom</label>
                     <input type="radio" name="delivery_measure" value="default"/>
                     <input type="radio" name="delivery_measure" value="custom"/>
                 </div>
-
+                
+                <div id="error_msg">
+                </div>
                 <div id="checkout_delivery_customer">
-                    <table >
+                    <table>
+                        <tbody>
                         <tr>
                             <td>Name:</td><td><input type="text" id="customer_name"/></td>
-                            <td>Contact Number:</td><td><input type="text" id="customer_phone"/></td>
+                            <td>Contact Number:</td><td><input type="text" id="customer_phone" size="10"/></td>
                         </tr>
-                        <tr><td>Address:</td><td colspan="3"><input type="text" id="customer_address"/></td></tr>
-                        <tr><td colspan="2">Expected Delivery</td></tr>
-                        <tr><td>Date:</td><td><input type="text" id="customer_name"/></td></tr>
-                        <tr><td>Time:</td><td><input type="text" id="customer_name"/></td></tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td colspan="3">
+                                <input type="text" id="customer_address_line1" size="30" maxlength="30"/><br/>
+                                <input type="text" id="customer_address_line2" size="30" maxlength="30"/><br/>
+                                <select id="customer_address_line3">
+                                    <option value="35">Hong Kong</option>
+                                    <option value="15">Kowloon</option>
+                                    <option value="30">New Territories</option>
+                                </select>
+                            </td>
+                            </tr>
+                        <tr><td colspan="2" style="">Expected Delivery</td></tr>
+                        <tr><td>Date:</td><td><input type="Date" id="customer_delivery_date"/></td><td>Time:</td><td><input type="Time" id="customer_delivery_time"/></td></tr>
+                        <tr></tr>
+                            </tbody>
                     </table>
                 </div>
             
@@ -116,7 +140,7 @@
 					<td >HKD</td>
 					<td id="ttl_price">0.0</td>
 				</tr>
-				<tr><td>Shipment: </td><td>HKD</td><td id="shipment">0.0</td></tr>
+				<tr><td>Shipment: </td><td>HKD</td><td id="shipment"></td></tr>
 				<tr style="height:20px"></tr>
 				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="color:green" id="discount">HKD</td><td style="color:green">-0.0 (<span id="discount_percent">0</span>% off)</td></tr>
 			</table>
@@ -141,8 +165,8 @@
 		</div>
 		
 		<div class="options">
-			<a class="button" href="">Continue shopping</a>
-			<a class="button" href="">Secure Checkout</a>
+			<a class="button" href="shoppingcart.html" id="back">Back to cart</a>
+			<a class="button" href="checkout_payment.html" id="proceed" onclick="return verify()">Proceed Payment</a>
 		</div>
         
         <div class="payment_logos">

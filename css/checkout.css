@@ -21,6 +21,13 @@
     width:3%;
 }
 
+#left_indication > table tbody tr {
+    height: 30px;
+}
+
+#left_indication > table tbody {
+    overflow-y: scroll;
+}
 
 #item_list {
     width: 100%;
@@ -55,15 +62,93 @@
     background-color: #009900;
     color: inherit;
 }
-    
-#checkout_delivery_customer {
-    height: 90%;
-    
-    
+
+#error_msg {
+    border: 1px dashed #CC0000;
+    display: none;
+    width:94%;
+    padding: 0.5% 3%;
+    margin-top: 2%;
+    background: #EDA8AA;
 }
+
+#error_msg > div {
+    color: #cc0000;
+    padding-bottom : 5px;
+    padding-top : 5px;
+}
+
+
+#checkout_delivery_customer {
+    height: 61%;
+    margin-top: 2%;
+    padding: 2% 2% 0 2%;
+}
+
 #checkout_delivery_customer table {
-    width: 100%;
+    padding: 0;
+    margin: 0;
+    width: 99%;
     height: 100%;
     overflow: hidden;
+    border: 0;
+}
+
+
+#checkout_delivery_options {
     
 }
+
+#checkout_delivery_customer > table tbody {
+    overflow-y: auto;
+    border: 0;
+}
+#checkout_delivery_customer > table tbody tr{
+   border-right: 0;
+}
+
+#checkout_delivery_customer > table tbody tr td{ 
+   border-right: 0;
+}
+
+#checkout_delivery_customer > table tbody tr { 
+    height: 50px;
+}
+
+#checkout_delivery_customer > table tbody tr:nth-child(3) { 
+    height: 50px;
+    vertical-align: bottom;
+    text-align:left; font-size:20px; font-weight:bold;
+}
+
+#checkout_delivery_customer > table tbody tr td:first-child,
+#checkout_delivery_customer > table tbody tr td:nth-child(3){ 
+    width:20%;
+}
+
+#checkout_delivery_customer > table tbody tr:nth-child(2)  td:nth-child(1){ 
+    width:7.5%;
+}
+
+#checkout_delivery_customer > table tbody tr:nth-child(2)  td:nth-child(2){ 
+    text-align: left;
+    padding-left: 5px;
+}
+
+#checkout_delivery_customer > table tbody tr td:nth-child(2),
+#checkout_delivery_customer > table tbody tr td:nth-child(4){ 
+    width:20%;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#customer_address_line1, 
+#customer_address_line2,
+#customer_address_line3 {
+    margin: 3px 0;
+}
+
+.error_field {
+    border-color: #CC0000;
+}
+
