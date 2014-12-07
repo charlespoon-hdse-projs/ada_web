@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script src="js/silder.js"></script>
+	<script type="application/javascript" src="js/StandardLibrary.js"></script>
+    <script type="application/javascript" src="js/SearchController.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/silder.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script type="application/javascript" src="js/jquery-1.11.1_min.js"></script>
+    <title>Simple Fade Slideshow Theme - Jssor Slider, Carousel, Slideshow with Javascript Source Code</title>
 </head>
-<body>
-<header>
+
+<body style="font-family:Arial, Verdana;background-color:#fff;">
+    <header>
     <div class="headbar">
         <div class="headbarInner">
             Welcome, user.
-            <div class="right">Login | Register</div>
+            <div class="right"><a href="login.html">Login</a> | <a href="register.html">Register</a></div>
         </div>
     </div>
     <div class="logoSearch">
-        <a href="index.html"><img src="img/logo.png" alt="logo" title="Back to Home page" /></a>
+        <img src="img/logo.png" alt="logo" title="Back to Home page" />
         <div class="right" id="searchbox">
             <input type="text" name="criteria" placeholder="Search a product" />
             <button type="submit">Search</button>
@@ -54,7 +64,7 @@
                 <a href="search.html?category=female&subcategory=blazers">Blazers</a>
                 <a href="search.html?category=female&subcategory=trousers">Trousers</a>
                 <a href="search.html?category=female&subcategory=jeans">Jeans</a>
-                <a href="search.html?category=female&subcategory=dresses">Dresses</a>
+                <a href="search.html?category=female&subcategory=dressers">Dressers</a>
                 <a href="search.html?category=female&subcategory=skirts">Skirts</a>
             </div>
         </div>
@@ -88,7 +98,85 @@
         </div>
     </div>
 </header>
-<content></content>
+    <content>
+
+	
+
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    
+    <div id="slider1_container" style=" width: 1200px; height: 444px; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+               <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 444px; overflow: hidden;">
+            <div>
+                <img u="image" src="img/index/batman_BNR_W1.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/index/CACO-KIDS.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/index/TOP_0728_NAVY-M.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/index/141013_BNR.jpg" />
+            </div>
+            <div>
+                <img u="image" src="img/index/batman_BNR.jpg" />
+            </div>
+
+        </div>
+
+
+
+        <!-- Bullet Navigator Skin Begin -->
+
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 16px; right: 6px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+        <!-- Arrow Navigator Skin Begin -->
+
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+    </div>
+    <!-- Jssor Slider End -->
+   <div class="div_bot">
+        <div class="div_left">
+            <a href="#">
+                <img src="img/index_top.jpg" />
+            </a>
+        </div>
+        <div class="div_mid">
+            <a href="#">
+                <img src="img/index/140612_2pic88_01.jpg" />
+            </a>
+        </div>
+        <div class="div_right">
+            <a href="#">
+                <img src="img/index/SALE-M-50.jpg">
+            </a>
+        </div>
+    </div>
+   </content>
+    
 <footer>
     &copy; 1995 - 2014 TopSales Corporation
     <div class="right">
@@ -96,4 +184,5 @@
     </div>
 </footer>
 </body>
+
 </html>

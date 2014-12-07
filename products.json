@@ -2,15 +2,15 @@
 	<script type="application/javascript" src="js/StandardLibrary.js"></script>
     <script type="application/javascript" src="js/SearchController.js"></script>
 	
-	<header>
+<header>
     <div class="headbar">
         <div class="headbarInner">
             Welcome, user.
-            <div class="right">Login | Register</div>
+            <a href="shoppingcart.html">Cart</a> | Profile | <a href="login.html">Logout</a>
         </div>
     </div>
     <div class="logoSearch">
-        <img src="img/logo.png" alt="logo" title="Back to Home page" />
+        <a href="index.html"><img src="img/logo.png" alt="logo" title="Back to Home page" /></a>
         <div class="right" id="searchbox">
             <input type="text" name="criteria" placeholder="Search a product" />
             <button type="submit">Search</button>
