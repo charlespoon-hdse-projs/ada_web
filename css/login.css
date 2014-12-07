@@ -23,7 +23,7 @@ fieldset#input {
 }
 
 
-input[type=text], input[type=password] {
+#loginForm input[type=text], #loginForm input[type=password] {
     background: #f1f1f1;
     padding: 15px 15px 15px 30px;
     margin: 0 0 10px 0;

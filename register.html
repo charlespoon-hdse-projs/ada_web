@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="css/register.css">
-
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    
+        <script type="application/javascript" src="js/StandardLibrary.js"></script>
+    <script type="application/javascript" src="js/SearchController.js"></script>
     <script type="text/javascript">
         function validateEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -102,6 +105,88 @@
     </script>
 </head>
 <body>
+<header>
+    <div class="headbar">
+        <div class="headbarInner">
+            Welcome, user.
+            <div class="right">Login | Register</div>
+        </div>
+    </div>
+    <div class="logoSearch">
+        <img src="img/logo.png" alt="logo" title="Back to Home page" />
+        <div class="right" id="searchbox">
+            <input type="text" name="criteria" placeholder="Search a product" />
+            <button type="submit">Search</button>
+        </div>
+    </div>
+    <div class="table category">
+        <div class="cell categoryItem male"><a href="search.html?category=male">Male</a></div>
+        <div class="cell categoryItem female"><a href="search.html?category=female">Female</a></div>
+        <div class="cell categoryItem kids"><a href="search.html?category=kids">Kids</a></div>
+        <div class="cell categoryItem accessories"><a href="search.html?category=accessories">Accessories</a></div>
+    </div>
+    <div class="subcategory male-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=jacket-coats">Jacket/Coats</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=shirts">Shirts</a>
+                <a href="search.html?category=male&subcategory=polos">Polos</a>
+                <a href="search.html?category=male&subcategory=suits">Suits</a>
+                <a href="search.html?category=male&subcategory=t-shirts">T-Shirts</a></div>
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=trousers">Trousers</a>
+                <a href="search.html?category=male&subcategory=chinos">Chinos</a>
+                <a href="search.html?category=male&subcategory=jeans">Jeans</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory female-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=female&subcategory=basics">Basics</a>
+                <a href="search.html?category=female&subcategory=shirts">Shirts</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=female&subcategory=blazers">Blazers</a>
+                <a href="search.html?category=female&subcategory=trousers">Trousers</a>
+                <a href="search.html?category=female&subcategory=jeans">Jeans</a>
+                <a href="search.html?category=female&subcategory=dressers">Dressers</a>
+                <a href="search.html?category=female&subcategory=skirts">Skirts</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory kids-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=kids&subcategory=t-shirts">T-Shirts</a>
+                <a href="search.html?category=kids&subcategory=one-pieces">One-Pieces</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=kids&subcategory=sweaters">Sweaters</a>
+                <a href="search.html?category=kids&subcategory=jackets">Jackets</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory accessories-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=hats">Hats</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=bells">Bells</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=scarves">Scarves</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=others">Others</a>
+            </div>
+        </div>
+    </div>
+</header>
+<content>
 <form id="registerForm" name="register" onsubmit="return confirm()">
     <h1>Register</h1>
     <fieldset id="input">
@@ -120,5 +205,12 @@
     </fieldset>
     <a href=" " id="foot">Back To Main Page</a>
 </form>
+    </content>
+    <footer>
+    &copy; 1995 - 2014 TopSales Corporation
+    <div class="right">
+        test
+    </div>
+</footer>
 </body>
 </html>

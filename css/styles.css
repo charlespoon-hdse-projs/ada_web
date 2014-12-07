@@ -4,6 +4,9 @@
 .right { float: right; }
 .clear { clear: both; }
 
+.right a {
+    text-decoration: none; color:#FFF;
+}
 .centreText { text-align: center; }
 .justifyText { text-align: justify; }
 .justifyText:after { content: ""; display: inline-block; width: 100%; }

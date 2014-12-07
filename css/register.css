@@ -16,13 +16,13 @@ body { background: none #d9dee2;
     border-radius: 3px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, .2), 0 3px 0 #fff, 0 4px 0 rgba(0, 0, 0, .2), 0 6px 0 #fff, 0 7px 0 rgba(0, 0, 0, .2);
 }
-fieldset#input {
+#registerForm fieldset#input {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-input[type=text], input[type=password] {
+#registerForm input[type=text], #registerForm input[type=password] {
     background: #f1f1f1;
     padding: 15px 15px 15px 30px;
     margin: 0 ;
@@ -30,24 +30,24 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
 }
-input[id=email]{
+#registerForm input[id=email]{
     width: 570px;
 }
-input[id=fname],input[id=lname]{
+#registerForm input[id=fname],#registerForm input[id=lname]{
     width: 205px;
 }
 
-input[id=phone]{
+#registerForm input[id=phone]{
     width: 205px;
 }
 
-fieldset#operations {
+#registerForm fieldset#operations {
     margin: 25px 0 0 0;
     padding: 0;
     border:0
 }
 
-fieldset#operations > button[type=submit] {
+#registerForm fieldset#operations > button[type=submit] {
     background-color: #ffb94b;
     background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
     border-radius: 3px;
