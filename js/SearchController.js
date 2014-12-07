@@ -25,7 +25,10 @@ scLoadSubCategory = function(subCategory, catJson, fromDir, doneFunc) {
                 //} else if( json.subcategory !== subCategory) {
                 //    scOnReturnDataError("Returned sub-category does not match.");
                 } else {
-                    var imgdir = fromDir + "/" + subJsonUrl.substr(0, subJsonUrl.lastIndexOf("/") + 1);
+                    var subdir = subJsonUrl;
+                    var trim = subdir.lastIndexOf("/");
+                    if (trim > 0) subdir = subdir.substr(0, trim) + 1;
+                    var imgdir = fromDir + "/" + subJsonUrl.substr(0, trim);
                     $.each(json.items, function(i, item) {
                         for (var i = 0; i < item.images.length; i++) item.images[i] = imgdir + item.images[i];
                     });
