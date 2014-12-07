@@ -96,9 +96,11 @@
 /*#endregion tbody*/
 
 #relativeItem {
-    width:26%; 
+    width:25%; 
     float:left;
     margin: 1%;
+    height: 95%;
+    text-align: center;
 }
 
 

@@ -1,0 +1,66 @@
+#checkout_payment {
+    float:left;
+    height: 90%;
+    margin: 1%;
+    padding: 1% 1%;
+    width: 96%;
+}
+
+#payOtion{
+    font-size: 32px;
+    margin:2%;
+}
+
+#paytext{
+    font-size: 20px;
+    margin:0 0 0 32px;
+}
+
+#payway{
+    font-size: 18px;
+    margin:32px 0 0 50px;
+}
+
+#payway_eps{
+    margin:0 0 0 250px;
+}
+
+#payInfo {
+    margin: 32px 0 0 0;
+    font: normal 15px/1 Verdana, Helvetica;
+}
+td[class=tn]{
+    text-align: right;
+}
+table#payment_info{
+    padding: 15px 15px 15px 30px;
+    border-spacing: 5px 30px;
+}
+input[id=card_no],input[id=card_holder]{
+    width: 300px;
+    padding: 5px 5px 5px 5px;
+}
+
+input[id=sc]{
+    width: 100px;
+    padding: 5px 5px 5px 5px;
+}
+
+#month_select{
+    width: 130px;
+    padding: 5px 5px 5px 5px;
+}
+#year_select{
+    width: 130px;
+    padding: 5px 5px 5px 5px;
+}
+#error1_msg{
+    display:none;
+    background-color:lightpink;
+    border: 1px dashed #CC0000;
+    float: right;
+    width: 700px;
+    font-size: 18px;
+    color:red;
+}
+

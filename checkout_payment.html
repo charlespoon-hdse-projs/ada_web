@@ -1,167 +1,232 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/shoppingcart.js"></script>    
+    <link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/shoppingcart.js"></script>
+    <script src="js/checkout_delivery.js"></script>
+    <script src="js/payment.js"></script>
 </head>
 <body>
 <header>
     <div class="headbar">
         <div class="headbarInner">
             Welcome, user.
-            <div class="right">Login | Register</div>
+            <div class="right"><a href="shoppingcart.html">Cart</a> | Profile | <a href="login.html">Logout</a></div>
         </div>
     </div>
     <div class="logoSearch">
-        <img src="img/logo.png" alt="logo" title="Back to Home page" />
+        <a href="index.html"><img src="img/logo.png" alt="logo" title="Back to Home page" /></a>
         <div class="right" id="searchbox">
             <input type="text" name="criteria" placeholder="Search a product" />
             <button type="submit">Search</button>
         </div>
     </div>
-    <div class="cellWrapper category">
-        <div class="cell categoryItem" id="catMale">Male</div>
-        <div class="cell categoryItem" id="catFemale">Female</div>
-        <div class="cell categoryItem" id="catKids">Kids</div>
-        <div class="cell categoryItem" id="catAccessories">Accessories</div>
+    <div class="table category">
+        <div class="cell categoryItem male"><a href="search.html?category=male">Male</a></div>
+        <div class="cell categoryItem female"><a href="search.html?category=female">Female</a></div>
+        <div class="cell categoryItem kids"><a href="search.html?category=kids">Kids</a></div>
+        <div class="cell categoryItem accessories"><a href="search.html?category=accessories">Accessories</a></div>
+    </div>
+    <div class="subcategory male-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=jacket-coats">Jacket/Coats</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=shirts">Shirts</a>
+                <a href="search.html?category=male&subcategory=polos">Polos</a>
+                <a href="search.html?category=male&subcategory=suits">Suits</a>
+                <a href="search.html?category=male&subcategory=t-shirts">T-Shirts</a></div>
+            <div class="cell centreText">
+                <a href="search.html?category=male&subcategory=trousers">Trousers</a>
+                <a href="search.html?category=male&subcategory=chinos">Chinos</a>
+                <a href="search.html?category=male&subcategory=jeans">Jeans</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory female-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=female&subcategory=basics">Basics</a>
+                <a href="search.html?category=female&subcategory=shirts">Shirts</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=female&subcategory=blazers">Blazers</a>
+                <a href="search.html?category=female&subcategory=trousers">Trousers</a>
+                <a href="search.html?category=female&subcategory=jeans">Jeans</a>
+                <a href="search.html?category=female&subcategory=dressers">Dressers</a>
+                <a href="search.html?category=female&subcategory=skirts">Skirts</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory kids-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=kids&subcategory=t-shirts">T-Shirts</a>
+                <a href="search.html?category=kids&subcategory=one-pieces">One-Pieces</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=kids&subcategory=sweaters">Sweaters</a>
+                <a href="search.html?category=kids&subcategory=jackets">Jackets</a>
+            </div>
+        </div>
+    </div>
+    <div class="subcategory accessories-sub">
+        <div class="table widest">
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=hats">Hats</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=bells">Bells</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=scarves">Scarves</a>
+            </div>
+            <div class="cell centreText">
+                <a href="search.html?category=accessories&subcategory=others">Others</a>
+            </div>
+        </div>
     </div>
 </header>
 <content>
-<div id="container" class="divider">
-    
-	<div id="progressBar" class="roundBorder" style="position: relative" >
-        <ul style="width:350px; height:20px; position: absolute; top:50%; left:50%; margin: -10px 0 0 -175px">
-            <li class="progressListItem selectedListItem"><a href="">Cart</a></li>
-            <li class="progressListItem"><img src="img/arrow_right.png" style="width:20px;"/></li>
-            <li class="progressListItem"><a href="">Delivery Measure</a></li>
-            <li class="progressListItem"><img src="img/arrow_right.png" style="width:20px;"/></li>
-            <li class="progressListItem"><a href="">Payment</a></li>
-        </ul>
-	</div>
-	
-	<div id="left_navigation" class="divider item" >
-        <div id="relativeItem" >
-            12345
+    <div id="container" class="divider">
+
+        <div id="progressBar" class="roundBorder" style="position: relative" >
+            <ul style="width:350px; height:20px; position: absolute; top:50%; left:50%; margin: -10px 0 0 -175px">
+                <li class="progressListItem"><a href="">Cart</a></li>
+                <li class="progressListItem"><img src="img/arrow_right.png" style="width:20px;"/></li>
+                <li class="progressListItem"><a href="">Delivery Measure</a></li>
+                <li class="progressListItem"><img src="img/arrow_right.png" style="width:20px;"/></li>
+                <li class="progressListItem selectedListItem"><a href="">Payment</a></li>
+            </ul>
         </div>
-		<table id="item_list">
-            <thead>
-                <tr>
-                    <th width="30%">
-                        Product
-                    </th>
-                    <th>Product Details</th>
-                    <th>Amount</th>
-                    <th>Unit Price</th>
-                    <th>Sub-Total</th>
-                    <th></th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="image_with_name">
-                            <img src="img/prd_01.jpg" width=150px height=200px/>
-                            <div>Name of Product</div>
-                        </div>
-                    </td>
-                    <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
-                    <td>199.9</td>
-                    <td class="sub_total"></td>
-                </tr>
 
-                <tr class="alter">
-                    <td>
-                        <div class="image_with_name">
-                            <img src="img/prd_02.jpg" width=150px height=200px/>
-                            <div>Name of Product</div>
-                        </div>
-                    </td>
-                    <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
-                    <td>199.9</td>
-                    <td class="sub_total">599.7</td>
-                </tr>                
+        <div id="left_navigation" class="divider" >
 
-                <tr>
-                    <td>
-                        <div class="image_with_name">
-                            <img src="img/prd_03.jpg" width=150px height=200px/>
-                            <div>Name of Product</div>
-                        </div>
-                    </td>
-                    <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
-                    <td>199.9</td>
-                    <td class="sub_total">599.7</td>
-                </tr>
+            <div id="checkout_payment" class="roundBorder">
+                <div id="payOtion">Payment Options</div>
+                <p id="paytext">Please choose your payment option here.</p>
+                <div id="payway">
+                <label><input type="radio" name="payment_option" id="credit_card" value="credit_card" checked/>Credit Card</label>
+                <label id="payway_eps"><input type="radio" name="payment_option" id="eps" value="eps"/>EPS</label>
 
-                <tr class="alter">
-                    <td>
-                        <div class="image_with_name">
-                            <img src="img/prd_04.jpg" width=150px height=200px/>
-                            <div>Name of Product</div>
-                        </div>
-                    </td>
-                    <td>Details</td>
-                    <td><input type="number" value="3" min="1" max="99" class="amount"/><br/><br/><span class="item_remove">remove</span></td>
-                    <td>199.9</td>
-                    <td class="sub_total">599.7</td>
-                </tr> 
-            </tbody>
-		</table>
-            
-	</div>
-	<div id="right_content" class="divider">
-		<div id="price" class="roundBorder right_content_element">
-			<table id="priceDetails" cellspacing="10">
-				<tr>
-					<td style="font-size:20px; font-weight:bold;" >Item total: </td>
-					<td >HKD</td>
-					<td id="ttl_price">0.0</td>
-				</tr>
-				<tr><td>Shipment: </td><td>HKD</td><td id="shipment">0.0</td></tr>
-				<tr style="height:20px"></tr>
-				<tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="color:green" id="discount">HKD</td><td style="color:green">-0.0 (<span id="discount_percent">0</span>% off)</td></tr>
-			</table>
-			
-			<div class="promotionalCode" id="promotionalCodeString" >
-				Enter promotional code
-			</div>
-            
-            <div class="promotionalCode" id="promotionalCodeInput" style="display:none">
-				<a id="smallButton" href="">X</a><input type="text" id="pcInput"/><a id="smallButton" href="">APPLY</a>
-			</div>
-		</div>
-        
-		<div class="right_content_element" >
-			<table style="width:98%; padding: 5% 5%" cellspacing="10">
-				<tr>
-					<td style="font-size:25px; font-weight:bold;">Total price: </td>
-					<td>HKD</td>
-					<td id="final_price">0.0</td>
-				</tr>
-			</table>
-		</div>
-		
-		<div class="options">
-			<a class="button" href="">Continue shopping</a>
-			<a class="button" href="">Secure Checkout</a>
-		</div>
-        
-        <div class="payment_logos">
-            <img src="img/MasterCard_Logo.png" width="100px" height="60px"/>
-            <img src="img/visa_Logo.png" width="100px" height="60px"/>
-            <img src="img/eps_logo.png" width="100px" height="60px"/>
+                <div id="payPic">
+                    <img src="img/MasterCard_Logo.png" width="70px" height="40px" style="margin:0 0 0 20px"/>
+                    <img src="img/visa_Logo.png" width="70px" height="40px" style="margin:0 0 0 50px"/>
+                    <img src="img/eps_logo.png" width="70px" height="40px"style="margin:0 0 0 170px"/>
+                </div>
+                </div>
+
+                <div id="error1_msg"></div>
+
+                <div id="payInfo">
+                    <p id="paytext">Please enter your credit card details below.</p>
+                    <table border="0" id="payment_info">
+                        <tr><td class="tn">Card Number:</td><td> <input type="text" name="card_no" id="card_no" maxlength="24" autofocus /></td></tr>
+                        <tr><td class="tn">Expiration Date:</td><td>
+                            <select id="month_select">
+                                <option value="1">Jan</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option>
+                                <option value="4">Apr</option>
+                                <option value="5">May</option>
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select>
+                            <select id="year_select">
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                            </select>
+                        </td></tr>
+                        <tr><td class="tn">Security Code: </td><td><input type="text" name="sc" id="sc"  maxlength="5"/></td></tr>
+                        <tr><td class="tn"> Cardholder Name: </td><td><input type="text" name="card_holder" id="card_holder"  /></td></tr>
+                    </table>
+                </div>
+
+            </div>
         </div>
-	</div>
-</div>
+
+        <div id="right_content" class="divider">
+            <div id="price" class="roundBorder right_content_element">
+                <table id="priceDetails" cellspacing="10">
+                    <tr>
+                        <td style="font-size:20px; font-weight:bold;" >Item total: </td>
+                        <td >HKD</td>
+                        <td >1040.0</td>
+                    </tr>
+                    <tr><td>Shipment: </td><td>HKD</td><td id="shipment">35.0</td></tr>
+                    <tr style="height:20px"></tr>
+                    <tr><td style="font-size:25px; font-weight:bold;">Discount: </td><td style="color:green" id="discount">HKD</td><td style="color:green">-0.0 (<span id="discount_percent">0</span>% off)</td></tr>
+                </table>
+
+                <div class="promotionalCode" id="promotionalCodeString" >
+                    Enter promotional code
+                </div>
+
+                <div class="promotionalCode" id="promotionalCodeInput" style="display:none">
+                    <a id="smallButton" href="">X</a><input type="text" id="pcInput"/><a id="smallButton" href="">APPLY</a>
+                </div>
+            </div>
+
+            <div class="right_content_element" >
+                <table style="width:98%; padding: 5% 5%" cellspacing="10">
+                    <tr>
+                        <td style="font-size:25px; font-weight:bold;">Total price: </td>
+                        <td>HKD</td>
+                        <td >1075.0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="options">
+                <a class="button" href="checkout_delivery.html" id="back">Back to delivery</a>
+                <a class="button" href="search.html" id="proceed" onclick="return payVerify();">Confirm Payment</a>
+        </div>
+
+            <div class="payment_logos">
+                <img src="img/MasterCard_Logo.png" width="100px" height="60px"/>
+                <img src="img/visa_Logo.png" width="100px" height="60px"/>
+                <img src="img/eps_logo.png" width="100px" height="60px"/>
+            </div>
+        </div>
+    </div>
 </content>
 <footer>
-	this is footer
+    &copy; 1995 - 2014 TopSales Corporation
+    <div class="right">
+        test
+    </div>
 </footer>
 </body>
 </html>
