@@ -92,8 +92,8 @@ var scOnReturnDataError = function(textStatus){
 
 scCreateBigViewAndTag = function(item) {
     var ret = $("<div productid=\"" + item.id + "\">").addClass("bigViewItem");
-    ret.append($("<div>").addClass("photo").append($("<img>", {"src": item.images[0]})));
-    ret.append($("<span>").addClass("title").html(item.name_en));
+    ret.append($("<div>").addClass("photo").append($('<a>', {"href": "item.html?productid=" + item.id}).append($("<img>", {"src": item.images[0]}))));
+    ret.append($("<span>").addClass("title").html($('<a>', {"href": "item.html?productid=" + item.id}).append(item.name_en)));
     ret.append($("<br />"));
     ret.append($("<span>").addClass("price").html(item.price));
 
@@ -104,8 +104,8 @@ scCreateBigViewAndTag = function(item) {
 
 scCreateDetailViewAndTag = function(item) {
     var ret = $("<div productid=\"" + item.id + "\">").addClass("detailViewItem");
-    ret.append($("<div>").addClass("photo").append($("<img>", {"src": item.images[0]})));
-    ret.append($("<span>").addClass("title").html(item.name_en));
+    ret.append($("<div>").addClass("photo").append($('<a>', {"href": "item.html?productid=" + item.id}).append($("<img>", {"src": item.images[0]}))));
+    ret.append($("<span>").addClass("title").html($('<a>', {"href": "item.html?productid=" + item.id}).append(item.name_en)));
     ret.append($("<br />"));
     ret.append($("<span>").addClass("price").html(item.price));
 
